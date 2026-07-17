@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 1920 1080"
+preserveAspectRatio="xMidYMid slice">
+
+<defs>
+
+<!-- ======================================================
+     BACKGROUND
+====================================================== -->
+
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+
+<stop offset="0%" stop-color="#020612"/>
+
+<stop offset="50%" stop-color="#041428"/>
+
+<stop offset="100%" stop-color="#020915"/>
+
+</linearGradient>
+
+<!-- ======================================================
+     CYAN GLOW
+====================================================== -->
+
+<filter id="glow">
+
+<feGaussianBlur stdDeviation="4" result="blur"/>
+
+<feMerge>
+
+<feMergeNode in="blur"/>
+
+<feMergeNode in="SourceGraphic"/>
+
+</feMerge>
+
+</filter>
+
+<filter id="softGlow">
+
+<feGaussianBlur stdDeviation="10"/>
+
+</filter>
+
+<!-- ======================================================
+     CITY PULSE
+====================================================== -->
+
+<radialGradient id="cityGlow">
+
+<stop offset="0%" stop-color="#7ffcff"/>
+
+<stop offset="100%" stop-color="#00cfff" stop-opacity="0"/>
+
+</radialGradient>
+
+</defs>
+
+<!-- ======================================================
+     BACKGROUND
+====================================================== -->
+
+<rect
+width="1920"
+height="1080"
+fill="url(#bg)"/>
+
+<!-- ======================================================
+     WORLD MAP (SIMPLIFIED SILHOUETTE)
+====================================================== -->
+
+<g
+fill="#0b1b30"
+opacity=".72">
+
+<path d="
+M120 330
+L210 250
+L330 220
+L410 250
+L470 330
+L510 390
+L460 460
+L360 470
+L260 430
+L180 400
+Z"/>
+
+<path d="
+M520 250
+L760 170
+L900 230
+L970 310
+L930 410
+L760 430
+L610 390
+L520 320
+Z"/>
+
+<path d="
+M900 470
+L1030 450
+L1110 520
+L1090 650
+L990 720
+L900 650
+L860 560
+Z"/>
+
+<path d="
+M1180 230
+L1440 210
+L1680 280
+L1750 390
+L1700 500
+L1540 530
+L1390 500
+L1260 420
+L1170 320
+Z"/>
+
+<path d="
+M1490 620
+L1610 650
+L1690 730
+L1640 830
+L1510 840
+L1430 760
+Z"/>
+
+</g>
+
+<!-- ======================================================
+     GLOBAL TRADE ROUTES
+====================================================== -->
+
+<g
+stroke="#39dfff"
+stroke-width="2"
+fill="none"
+opacity=".35"
+filter="url(#glow)">
+
+<path d="M250 300 C600 100 900 180 1350 260"/>
+
+<path d="M280 340 C620 470 910 510 1510 700"/>
+
+<path d="M730 250 C930 260 1250 310 1680 360"/>
+
+<path d="M1030 560 C1200 460 1400 410 1680 340"/>
+
+<path d="M960 600 C850 520 650 450 420 350"/>
+
+<path d="M1080 560 C1350 540 1500 600 1650 770"/>
+
+<path d="M420 350 C690 250 960 240 1200 240"/>
+
+<path d="M420 390 C640 520 900 620 1430 760"/>
+
+</g>
+
+<!-- ======================================================
+     ECONOMIC HUBS
+====================================================== -->
+
+<g filter="url(#glow)">
+
+<!-- ======================================================
+     ECONOMIC HUBS
+====================================================== -->
+
+<circle cx="280" cy="330" r="5" fill="#7ffcff">
+    <animate attributeName="r" values="5;10;5" dur="3s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="420" cy="360" r="4" fill="#7ffcff">
+    <animate attributeName="r" values="4;9;4" dur="2.8s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="610" cy="260" r="5" fill="#7ffcff">
+    <animate attributeName="r" values="5;11;5" dur="3.5s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="760" cy="240" r="5" fill="#7ffcff">
+    <animate attributeName="r" values="5;12;5" dur="2.9s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="920" cy="270" r="5" fill="#7ffcff">
+    <animate attributeName="r" values="5;10;5" dur="3.2s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1090" cy="300" r="5" fill="#7ffcff">
+    <animate attributeName="r" values="5;11;5" dur="2.7s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1320" cy="310" r="5" fill="#7ffcff">
+    <animate attributeName="r" values="5;12;5" dur="3.4s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1530" cy="350" r="5" fill="#7ffcff">
+    <animate attributeName="r" values="5;10;5" dur="3.1s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1660" cy="400" r="5" fill="#7ffcff">
+    <animate attributeName="r" values="5;12;5" dur="2.5s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1000" cy="570" r="5" fill="#7ffcff">
+    <animate attributeName="r" values="5;12;5" dur="3.6s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1470" cy="740" r="5" fill="#7ffcff">
+    <animate attributeName="r" values="5;11;5" dur="3s" repeatCount="indefinite"/>
+</circle>
+
+</g>
+
+<!-- ======================================================
+     GLOWING CITY DOTS
+====================================================== -->
+
+<g fill="#7ffcff" filter="url(#glow)">
+
+<circle cx="240" cy="300" r="2"/>
+<circle cx="260" cy="330" r="2"/>
+<circle cx="295" cy="360" r="2"/>
+<circle cx="330" cy="315" r="2"/>
+<circle cx="390" cy="345" r="2"/>
+<circle cx="455" cy="320" r="2"/>
+
+<circle cx="560" cy="250" r="2"/>
+<circle cx="610" cy="230" r="2"/>
+<circle cx="670" cy="245" r="2"/>
+<circle cx="720" cy="225" r="2"/>
+<circle cx="790" cy="235" r="2"/>
+<circle cx="860" cy="255" r="2"/>
+<circle cx="930" cy="285" r="2"/>
+
+<circle cx="1180" cy="260" r="2"/>
+<circle cx="1260" cy="280" r="2"/>
+<circle cx="1330" cy="300" r="2"/>
+<circle cx="1410" cy="315" r="2"/>
+<circle cx="1485" cy="335" r="2"/>
+<circle cx="1560" cy="365" r="2"/>
+<circle cx="1640" cy="395" r="2"/>
+
+<circle cx="980" cy="550" r="2"/>
+<circle cx="1015" cy="590" r="2"/>
+<circle cx="1045" cy="620" r="2"/>
+<circle cx="1085" cy="660" r="2"/>
+
+<circle cx="1470" cy="720" r="2"/>
+<circle cx="1510" cy="750" r="2"/>
+<circle cx="1560" cy="780" r="2"/>
+
+</g>
+
+<!-- ======================================================
+     FLOATING PARTICLES
+====================================================== -->
+
+<g fill="#6cefff" opacity=".35">
+
+<circle cx="80" cy="120" r="1.4">
+<animate attributeName="cy" values="120;80;120" dur="12s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="260" cy="940" r="1.2">
+<animate attributeName="cy" values="940;890;940" dur="10s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="510" cy="150" r="1.5">
+<animate attributeName="cy" values="150;110;150" dur="14s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="720" cy="980" r="1.3">
+<animate attributeName="cy" values="980;930;980" dur="11s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="930" cy="120" r="1.4">
+<animate attributeName="cy" values="120;70;120" dur="13s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1210" cy="920" r="1.2">
+<animate attributeName="cy" values="920;860;920" dur="12s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1450" cy="170" r="1.5">
+<animate attributeName="cy" values="170;120;170" dur="15s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1700" cy="920" r="1.4">
+<animate attributeName="cy" values="920;860;920" dur="14s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1840" cy="320" r="1.2">
+<animate attributeName="cy" values="320;270;320" dur="11s" repeatCount="indefinite"/>
+</circle>
+
+</g>
+
+<!-- ======================================================
+     ANIMATED DATA PACKETS
+====================================================== -->
+
+<g fill="#9efcff" filter="url(#glow)">
+
+    <circle r="3">
+        <animateMotion
+            dur="8s"
+            repeatCount="indefinite"
+            path="M250 300 C600 100 900 180 1350 260"/>
+    </circle>
+
+    <circle r="2.5">
+        <animateMotion
+            dur="10s"
+            repeatCount="indefinite"
+            path="M280 340 C620 470 910 510 1510 700"/>
+    </circle>
+
+    <circle r="2.8">
+        <animateMotion
+            dur="7s"
+            repeatCount="indefinite"
+            path="M730 250 C930 260 1250 310 1680 360"/>
+    </circle>
+
+    <circle r="2.5">
+        <animateMotion
+            dur="9s"
+            repeatCount="indefinite"
+            path="M1030 560 C1200 460 1400 410 1680 340"/>
+    </circle>
+
+</g>
+
+<!-- ======================================================
+     LARGE AMBIENT GLOWS
+====================================================== -->
+
+<circle
+cx="420"
+cy="320"
+r="180"
+fill="url(#cityGlow)"
+opacity=".12">
+
+<animate
+attributeName="opacity"
+values=".08;.18;.08"
+dur="6s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<circle
+cx="950"
+cy="280"
+r="220"
+fill="url(#cityGlow)"
+opacity=".10">
+
+<animate
+attributeName="opacity"
+values=".06;.16;.06"
+dur="7s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<circle
+cx="1510"
+cy="360"
+r="210"
+fill="url(#cityGlow)"
+opacity=".10">
+
+<animate
+attributeName="opacity"
+values=".05;.14;.05"
+dur="8s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<circle
+cx="1040"
+cy="610"
+r="170"
+fill="url(#cityGlow)"
+opacity=".10">
+
+<animate
+attributeName="opacity"
+values=".05;.15;.05"
+dur="5.5s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<!-- ======================================================
+     VIGNETTE
+====================================================== -->
+
+<rect
+width="1920"
+height="1080"
+fill="black"
+opacity=".18"/>
+
+</svg>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Delegate Wallet</title>
+
+    <meta name="description"
+        content="Delegate Wallet - ECOFIN Committee Credit & Reward System">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================================
+         Animated Financial Background
+    =========================================================== -->
+
+    <div class="background">
+        <img src="background.svg" alt="">
+        <div class="overlay"></div>
+    </div>
+
+    <!-- ==========================================================
+         Toast Notification
+    =========================================================== -->
+
+    <div id="toast" class="toast"></div>
+
+    <!-- ==========================================================
+         LANDING PAGE
+    =========================================================== -->
+
+    <section id="landingPage" class="page active">
+
+        <div class="landing-container">
+
+            <div class="landing-header">
+
+                <h1>
+                    Delegate Wallet
+                </h1>
+
+                <p class="subtitle">
+                    Economic and Financial Committee Delegate Credit Management Platform
+                </p>
+
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🎮
+                    </div>
+
+                    <h3>
+                        Earn Through Games &
+                        Participation
+                    </h3>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🧾
+                    </div>
+
+                    <h3>
+                        Spend Strategically
+                    </h3>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ⚠️
+                    </div>
+
+                    <h3>
+                        Unlock Committee
+                        Perks
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <div class="system-console glass">
+
+                <div class="console-title">
+                    SYSTEM STATUS
+                </div>
+
+                <div id="systemMessage"
+                    class="console-text">
+
+                    Initializing Systems...
+
+                </div>
+
+            </div>
+
+            <button id="enterButton"
+                class="primary-button">
+
+                Enter Simulation
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         DASHBOARD
+    =========================================================== -->
+
+    <section id="dashboardPage"
+        class="page">
+
+        <header class="topbar glass">
+
+            <div>
+
+                <h2>
+                    Committee Dashboard
+                </h2>
+
+                <p>
+                    ECOFIN Simulation
+                </p>
+
+            </div>
+
+            <div class="admin-panel">
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    placeholder="Admin Password">
+
+                <button
+                    id="adminLoginButton"
+                    class="secondary-button">
+
+                    Login
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <div
+            id="adminStatus"
+            class="status-text">
+
+            Administrator Mode:
+            Disabled
+
+        </div>
+
+        <div class="dashboard-grid">
+
+            <div
+                class="dashboard-card"
+                id="walletCard">
+
+                <div class="dashboard-icon">
+                    💼
+                </div>
+
+                <h3>
+                    Wallet Manager
+                </h3>
+
+                <p>
+                    Manage delegate
+                    wallets, credits
+                    and purchase history.
+                </p>
+
+            </div>
+
+            <div
+                class="dashboard-card"
+                id="shopCard">
+
+                <div class="dashboard-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    Perk Shop
+                </h3>
+
+                <p>
+                    Purchase committee
+                    perks using delegate
+                    credits.
+                </p>
+
+            </div>
+
+            <div
+                class="dashboard-card"
+                id="leaderboardCard">
+
+                <div class="dashboard-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Leaderboard
+                </h3>
+
+                <p>
+                    Alphabetical overview
+                    of every delegate
+                    wallet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         WALLET MANAGER
+    =========================================================== -->
+
+    <section
+        id="walletPage"
+        class="page">
+
+        <header class="page-header">
+
+            <button
+                class="back-button"
+                data-back>
+
+                ← Dashboard
+
+            </button>
+
+            <h2>
+                💼 Wallet Manager
+            </h2>
+
+        </header>
+
+        <div class="glass add-country-panel" id="addCountryPanel">
+
+            <input
+                id="countryInput"
+                type="text"
+                placeholder="Enter Country Name">
+
+            <button
+                id="addCountryButton"
+                class="primary-button">
+
+                Add Country
+
+            </button>
+
+        </div>
+
+        <div
+            id="walletContainer"
+            class="wallet-grid">
+
+            <!-- Cards generated by script.js -->
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         PERK SHOP
+    =========================================================== -->
+
+    <section
+        id="shopPage"
+        class="page">
+
+        <header class="page-header">
+
+            <button
+                class="back-button"
+                data-back>
+
+                ← Dashboard
+
+            </button>
+
+            <h2>
+                🛒 Perk Shop
+            </h2>
+
+        </header>
+
+        <div class="glass shop-panel">
+
+            <div class="shop-info">
+
+                <h3>
+                    Committee Perks
+                </h3>
+
+                <p>
+                    Administrator access only.
+                    Purchasing a perk immediately deducts
+                    credits from the selected delegate and
+                    stores the purchase history using
+                    localStorage.
+                </p>
+
+            </div>
+
+            <div class="shop-controls">
+
+                <input
+                    type="text"
+                    id="shopCountry"
+                    placeholder="Enter Country Name">
+
+                <select id="perkSelect">
+
+                    <option value="Skip POI|130">
+                        Skip POI — 130 Credits
+                    </option>
+
+                    <option value="Skip Apology|200">
+                        Skip Apology — 200 Credits
+                    </option>
+
+                    <option value="Move up in GSL List|60">
+                        Move up in GSL List — 60 Credits
+                    </option>
+
+                    <option value="Initiate Rebuttal|70">
+                        Initiate Rebuttal — 70 Credits
+                    </option>
+
+                    <option value="Question Any Delegate|100">
+                        Question Any Delegate — 100 Credits
+                    </option>
+
+                    <option value="Pass Committee Policy (Only During Crisis)|400">
+                        Pass Committee Policy (Only During Crisis)
+                        — 400 Credits
+                    </option>
+
+                    <option value="Make Enforced Amendment to Draft Resolution|280">
+                        Make Enforced Amendment to Draft Resolution
+                        — 280 Credits
+                    </option>
+
+                    <option value="Pass Bloc's MOD Topic|300">
+                        Pass Bloc's MOD Topic
+                        — 300 Credits
+                    </option>
+
+                </select>
+
+                <button
+                    id="purchaseButton"
+                    class="primary-button">
+
+                    Purchase Perk
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         LEADERBOARD
+    =========================================================== -->
+
+    <section
+        id="leaderboardPage"
+        class="page">
+
+        <header class="page-header">
+
+            <button
+                class="back-button"
+                data-back>
+
+                ← Dashboard
+
+            </button>
+
+            <h2>
+                🏆 Leaderboard
+            </h2>
+
+            <p class="page-description">
+
+                Countries are displayed in
+                alphabetical order.
+
+            </p>
+
+        </header>
+
+        <div
+            id="leaderboardContainer"
+            class="leaderboard-grid">
+
+            <!-- Generated by JavaScript -->
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         PURCHASE HISTORY MODAL
+    =========================================================== -->
+
+    <div
+        id="purchaseModal"
+        class="modal">
+
+        <div
+            class="modal-card glass">
+
+            <button
+                id="closePurchaseModal"
+                class="close-button">
+
+                ×
+
+            </button>
+
+            <div
+                id="purchaseModalContent">
+
+                <h2>
+                    Purchased Perks
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================================
+         CONFIRMATION MODAL
+    =========================================================== -->
+
+    <div
+        id="confirmModal"
+        class="modal">
+
+        <div
+            class="modal-card glass confirmation-card">
+
+            <h2>
+                Confirmation
+            </h2>
+
+            <p id="confirmMessage">
+
+                Action completed.
+
+            </p>
+
+            <button
+                id="confirmClose"
+                class="primary-button">
+
+                Continue
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================================
+         LOADING OVERLAY
+    =========================================================== -->
+
+    <div
+        id="loadingOverlay">
+
+        <div class="loader-box glass">
+
+            <div class="loader-circle"></div>
+
+            <div
+                id="loaderText">
+
+                Initializing Systems...
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================================
+         FOOTER
+    =========================================================== -->
+
+    <footer>
+
+        <p>
+
+            Delegate Wallet
+            •
+            ECOFIN Committee Credit &
+            Reward System
+
+        </p>
+
+    </footer>
+
+    <!-- ==========================================================
+         JAVASCRIPT
+    =========================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
